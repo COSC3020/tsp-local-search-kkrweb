@@ -35,7 +35,7 @@ function tsp_ls(cityDistanceMatrix)
     var repeatCount = 0;
     var totalIterations = 0;
 
-    //cite source of inspiration to add the max bounds and actually guarantee that this thing stops    
+    //cite source of inspiration to add the max bounds and actually guarantee that this thing stops...even necessary?    
     var maxRepeatCount = 1000;    
     var maxTotalIterations = 10000;
 
@@ -72,7 +72,7 @@ function tsp_ls(cityDistanceMatrix)
     }
     shortestDistance = currentDistance;
 
-    while(repeatCount < maxRepeatCount && totalIterations < maxTotalIterations) 
+    while((repeatCount < maxRepeatCount) && (totalIterations < maxTotalIterations)) 
     {
         totalIterations++;
 
@@ -153,7 +153,7 @@ function tsp_ls(cityDistanceMatrix)
         }
     }
 
-       if(shortestDistance !== null)
+       if(shortestDistance != null)
        {
         return shortestDistance;
         } 
