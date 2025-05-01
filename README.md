@@ -89,3 +89,5 @@ https://en.wikipedia.org/wiki/2-opt
 http://matejgazda.com/tsp-algorithms-2-opt-3-opt-in-python/
 
 https://www.youtube.com/watch?v=wsEzZ4F_bS4
+
+For helping with the implementation actually terminating, guidelines for end / repitition bounds: https://en.wikipedia.org/wiki/Local_search_(optimization)#Termination_conditions
