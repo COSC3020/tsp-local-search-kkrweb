@@ -10,7 +10,6 @@
 
 
 
-
 function tsp_ls(cityDistanceMatrix) 
 {
     //early checks
@@ -36,13 +35,7 @@ function tsp_ls(cityDistanceMatrix)
     var currentDistance = null;
     var newDistance = null;
     
-    var repeatCount = 0;
-    var totalIterations = 0;
-
-    //cite source to add the max bounds and actually guarantee that this thing stops and makes progress...
-    //otherwise runs very long and annoying of course
-    var maxRepeatCount = 1000;    
-    var maxTotalIterations = 10000;
+    
 
     
     //
@@ -77,11 +70,11 @@ function tsp_ls(cityDistanceMatrix)
         
         currentDistance += cityDistanceMatrix[prevCity][currentCity];
     }
+    
     shortestDistance = currentDistance;
 
-    while((repeatCount < maxRepeatCount) && (totalIterations < maxTotalIterations)) 
+    while(true) 
     {
-        totalIterations++;
 
         var i = Math.floor(Math.random() * (numCities - 1));
         var k = i + 1 + Math.floor(Math.random() * (numCities - i - 1));
@@ -128,7 +121,6 @@ function tsp_ls(cityDistanceMatrix)
                 
                 currentDistance = newDistance;
                 shortestDistance = newDistance;
-                repeatCount = 0;
             }
                 
             else if(newDistance < currentDistance) 
@@ -144,19 +136,7 @@ function tsp_ls(cityDistanceMatrix)
                 {
                     shortestDistance = newDistance;
                 }
-                
-                repeatCount = 0;
             }
-                
-            else 
-            {
-                repeatCount++;
-            }
-        }
-            
-        else 
-        {
-            repeatCount++;
         }
     }
 
