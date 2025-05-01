@@ -82,3 +82,10 @@ Plagiarism Acknowledgement: I certify that I have listed all sources used to com
 
 
 Citations:
+
+
+https://en.wikipedia.org/wiki/2-opt
+
+http://matejgazda.com/tsp-algorithms-2-opt-3-opt-in-python/
+
+https://www.youtube.com/watch?v=wsEzZ4F_bS4
