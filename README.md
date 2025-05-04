@@ -62,9 +62,9 @@ Name: Kane Kriz
 
 Start Date: 17 April 2025
 
-Last Edited: 1 May 2025
+Last Edited: 4 May 2025
 
-Feedback Request 1 Date: X
+Feedback Request 1 Date: 4 May 2025
 
 
 
@@ -73,6 +73,37 @@ Feedback Request 1 Date: X
 
 
 Response: WIP
+
+
+
+The implementation's path reversal executes through three copy operations.
+
+These operations are `newPath[j] = currentPath[j]` for the initial segment, `newPath[j] = currentPath[k - (j - i)]` for the reversed portion, and `newPath[j] = currentPath[j]` for the final segment. 
+
+Each operation processes at most n cities, where n is the total number of cities, making each complete swap an $O(n)$ time operation.
+
+When combined with the subsequent $O(n)$ distance calculation, this results in each iteration requiring $O(n)$ time in the worst case.
+
+The memory usage is dominated by the $O(n^2)$ distance matrix storage, with additional $O(n)$ space required for the `currentPath` and `newPath` arrays. 
+
+Thus, the overall worst case asymptotic memory complexity is $O(n^2)$.
+
+
+
+Each iteration takes $O(n)$ time because the path reversal performs `numCities` assignments through the implementation's copy operations `newPath[j] = currentPath[j]` and `newPath[j] = currentPath[k - (j - i)]`.
+
+The distance calculaiton performs `numCities - 1` matrix accesses via `cityDistanceMatrix[newPath[j]][newPath[j+1]]`.
+
+The fixed `maxTotalIterations` bound of 10,000 makes the total complexity bounded at $O(n)$.
+
+These bounds of course can be altered / tweaked depending on the requirements of performance, test code, etc.
+
+Random indexes are selected via `i = Math.floor(Math.random() * (numCities - 1))` and `k = i + 1 + Math.floor(Math.random() * (numCities - i - 1))`.
+
+The randomization stops the algorithm from cycling through identical move sequences while maintaining 2 opt functionality.
+
+Thus, the overall worst case asymptotic runtime complexity is $O(n)$ due to the fixed `maxTotalIterations` bound.
+
 
 
 
