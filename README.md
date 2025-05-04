@@ -116,10 +116,10 @@ Plagiarism Acknowledgement: I certify that I have listed all sources used to com
 Citations:
 
 
-https://en.wikipedia.org/wiki/2-opt
+Wikipedia Contributors. “2-Opt.” Wikipedia, Wikimedia Foundation, 13 Nov. 2019, en.wikipedia.org/wiki/2-opt.
 
-http://matejgazda.com/tsp-algorithms-2-opt-3-opt-in-python/
+Gazda, Matej. “TSP Algorithms: 2-Opt, 3-Opt in Python | Matej Gazda.” Matej Gazda, 8 Feb. 2019, matejgazda.com/tsp-algorithms-2-opt-3-opt-in-python/.
 
-https://www.youtube.com/watch?v=wsEzZ4F_bS4
+“2-Opt Explaind | TSP Optimization Tutorial and Visualization.” Www.youtube.com, www.youtube.com/watch?v=wsEzZ4F_bS4.
 
-For helping with the implementation actually terminating, guidelines for end / repitition bounds: https://en.wikipedia.org/wiki/Local_search_(optimization)#Termination_conditions
+For helping with the implementation actually terminating, guidelines for end / repitition bounds: ---. “Local Search (Optimization).” Wikipedia, Wikimedia Foundation, 2 Aug. 2024, en.wikipedia.org/wiki/Local_search_(optimization)#Termination_conditions.
