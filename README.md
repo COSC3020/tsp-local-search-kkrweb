@@ -72,6 +72,14 @@ Feedback Request 1 Date: 4 May 2025
 //
 
 
+Feedback Request 2 Date: 5 May 2025
+
+
+//
+
+
+
+
 Response: 
 
 
@@ -84,9 +92,9 @@ Each operation processes at most n cities, where n is the total number of cities
 
 When combined with the subsequent $O(n)$ distance calculation, this results in each iteration requiring $O(n)$ time in the worst case.
 
-The memory usage is dominated by the $O(n^2)$ distance matrix storage, with additional $O(n)$ space required for the `currentPath` and `newPath` arrays. 
+The memory complexity is determined by the $O(n)$ space required for the `currentPath` and `newPath` arrays.
 
-Thus, the overall worst case asymptotic memory complexity is $O(n^2)$.
+Thus, the overall worst case asymptotic memory complexity is $O(n)$.
 
 
 
