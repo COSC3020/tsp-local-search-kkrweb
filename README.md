@@ -50,3 +50,84 @@ Test your new function; I've provided some basic testing code in `code.test.js`.
 What is the worst-case asymptotic time complexity of your implementation? What
 is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
+
+
+
+//
+
+
+
+
+Name: Kane Kriz
+
+Start Date: 17 April 2025
+
+Last Edited: 4 May 2025
+
+Feedback Request 1 Date: 4 May 2025
+
+
+
+
+//
+
+
+Feedback Request 2 Date: 5 May 2025
+
+
+//
+
+
+
+
+Response: 
+
+
+
+The implementation's path reversal executes through three copy operations.
+
+These operations are `newPath[j] = currentPath[j]` for the initial segment, `newPath[j] = currentPath[k - (j - i)]` for the reversed portion, and `newPath[j] = currentPath[j]` for the final segment. 
+
+Each operation processes at most n cities, where n is the total number of cities, making each complete swap an $O(n)$ time operation.
+
+When combined with the subsequent $O(n)$ distance calculation, this results in each iteration requiring $O(n)$ time in the worst case.
+
+The memory complexity is determined by the $O(n)$ space required for the `currentPath` and `newPath` arrays.
+
+Thus, the overall worst case asymptotic memory complexity is $O(n)$.
+
+
+
+Each iteration takes $O(n)$ time because the path reversal performs `numCities` assignments through the implementation's copy operations `newPath[j] = currentPath[j]` and `newPath[j] = currentPath[k - (j - i)]`.
+
+The distance calculaiton performs `numCities - 1` matrix accesses via `cityDistanceMatrix[newPath[j]][newPath[j+1]]`.
+
+The fixed `maxTotalIterations` bound of 10,000 makes the total complexity bounded at $O(n)$.
+
+These bounds of course can be altered / tweaked depending on the requirements of performance, test code, etc.
+
+Random indexes are selected via `i = Math.floor(Math.random() * (numCities - 1))` and `k = i + 1 + Math.floor(Math.random() * (numCities - i - 1))`.
+
+The randomization stops the algorithm from cycling through identical move sequences while maintaining 2 opt functionality.
+
+Thus, the overall worst case asymptotic runtime complexity is $O(n)$ due to the fixed `maxTotalIterations` bound.
+
+
+
+
+//
+
+
+Plagiarism Acknowledgement: I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
+
+
+Citations:
+
+
+Wikipedia Contributors. “2-Opt.” Wikipedia, Wikimedia Foundation, 13 Nov. 2019, en.wikipedia.org/wiki/2-opt.
+
+Gazda, Matej. “TSP Algorithms: 2-Opt, 3-Opt in Python | Matej Gazda.” Matej Gazda, 8 Feb. 2019, matejgazda.com/tsp-algorithms-2-opt-3-opt-in-python/.
+
+“2-Opt Explaind | TSP Optimization Tutorial and Visualization.” Www.youtube.com, www.youtube.com/watch?v=wsEzZ4F_bS4.
+
+For helping with the implementation actually terminating, guidelines for end / repitition bounds: ---. “Local Search (Optimization).” Wikipedia, Wikimedia Foundation, 2 Aug. 2024, en.wikipedia.org/wiki/Local_search_(optimization)#Termination_conditions.
